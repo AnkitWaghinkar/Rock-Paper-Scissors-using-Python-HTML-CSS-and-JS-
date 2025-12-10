@@ -5,7 +5,7 @@ It allows users to:
 
 -Play Rock, Paper, Scissors
 -See results with animations
--View a leaderboard stored in SQLite (leaderboard.db)
+-View a leaderboard stored in SQLite (`leaderboard.db`)
 
 This project demonstrates how Flask communicates with frontend JS, how to send user choices to the backend, and how to store scores.
 
@@ -56,7 +56,7 @@ Go to: http://127.0.0.1:5000/
 ---
 
 ## Notes
--Leaderboard data is stored in "leaderboard.db".
+-Leaderboard data is stored in `leaderboard.db`.
 
 ### -If the database is empty, run:
 
