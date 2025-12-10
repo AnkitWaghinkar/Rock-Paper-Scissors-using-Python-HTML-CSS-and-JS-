@@ -17,7 +17,7 @@ This project demonstrates how Flask communicates with frontend JS, how to send u
 
 ### Screenshot 
 
-<img width="1830" height="917" alt="home page" src="https://github.com/user-attachments/assets/64841c7b-64a6-412b-90e6-ba8333a73247" />
+<img width="1828" height="917" alt="home page" src="https://github.com/user-attachments/assets/ae497d90-3113-4c29-8a3e-cdfbcaa279cf" />
 
 ---
 
