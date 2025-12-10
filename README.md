@@ -13,10 +13,11 @@ This project demonstrates how Flask communicates with frontend JS, how to send u
 
 ## Live Demo (Deployed on Render)
 
-**Live Website:** https://
+**Live Website:** https://rock-paper-scissors-using-python-html.onrender.com
 
 ### Screenshot 
 
+<img width="1830" height="917" alt="home page" src="https://github.com/user-attachments/assets/64841c7b-64a6-412b-90e6-ba8333a73247" />
 
 ---
 
@@ -57,6 +58,9 @@ Go to: http://127.0.0.1:5000/
 
 ## Notes
 -Leaderboard data is stored in `leaderboard.db`.
+
+### Screenshot of leaderboard
+<img width="1841" height="942" alt="leaderboard" src="https://github.com/user-attachments/assets/eeeaeb2a-6d3b-40b0-aa98-87d1e758e0e9" />
 
 ### -If the database is empty, run:
 
