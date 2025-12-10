@@ -1,0 +1,194 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    color: #d6dce2;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+    background: url(/static/images/andrew-kliatskyi-VGQhjo6EUks-unsplash.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
+    text-align: center;
+    margin: 0;
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* Title */
+.title {
+    font-size:38px;
+    margin-bottom: 15px;
+    text-shadow: 0 0 10px black;
+}
+
+/* Animated fade-in */
+.fade-in {
+    opacity: 0;
+    animation: fade .8s ease forwards;
+}
+
+@keyframes fade {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Scoreboard */
+.scoreboard {
+    font-size: 18px;
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+    align-items: center;
+}
+
+.lb-btn {
+    padding: 6px 15px;
+    background: #c6cace;
+    color: black;
+    border-radius: 10px;
+    text-decoration: none;
+    font-size: 18px;
+    transition: all linear 0.2s;
+}
+
+.lb-btn:hover {
+    background: #333;
+    color: white;
+    transform: translateY(-3px);
+}
+
+/* input */
+.inputText{
+    margin-top: 20px;
+}
+
+/* Game area */
+#gameArea{
+    display: flex;
+    justify-content: center;
+    margin-top: 35px;
+}
+
+/* Game choices */
+.choices button {
+    backdrop-filter: blur(55px);
+    background: rgba(99, 94, 94, 0.1);
+    border-radius: 20px;
+    margin: 10px;
+    padding: 10px;
+    cursor: pointer;
+    border: none;
+    transition: all linear 0.25s;
+    box-shadow: 0 0 10px #000 inset;
+}
+
+.choices button:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 10px 0px #c6cace79;
+}
+
+.icon {
+    width: 130px;
+    filter: invert(95%) sepia(26%) saturate(286%) hue-rotate(174deg) brightness(84%) contrast(89%);
+}
+
+/* Result Box */
+.result-box {
+    margin-top: 25px;
+    padding: 20px;
+    backdrop-filter: blur(55px);
+    background: rgba(99, 94, 94, 0.1);
+    border-radius: 15px;
+    display: inline-block;
+    box-shadow: 0 0 10px black;
+}
+
+/* Loading Animation */
+.loading {
+    margin-top: 40px;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Sound toggle */
+.sound-toggle {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: #55555531;
+    backdrop-filter: blur(30px);
+    padding: 8px 15px;
+    border-radius: 8px;
+    color: white;
+    text-decoration: none;
+    border: 2px solid white;
+    transition: all linear 0.2s;
+}
+
+.sound-toggle:hover {
+    background: #c4d5e654;
+    transform: translateY(-3px);
+}
+
+/* Leaderboard table */
+.leaderboard {
+    width: 70%;
+    margin-inline: auto;
+    margin-bottom: 20px;
+    border-collapse: collapse;
+    background: rgba(77, 73, 73, 0.1);
+    backdrop-filter: blur(30px);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.leaderboard th,
+.leaderboard td {
+    padding: 12px;
+    border-bottom: 1px solid #555;
+}
+
+/* Back button */
+.back-btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 25px;
+    background: #333;
+    color: white;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: all linear 0.2s;
+}
+
+.back-btn:hover {
+    transform: translateY(-3px);
+    background: #111;   
+}
+
+.name-input {
+    margin-bottom: 10px;
+    padding: 10px;
+    width: 250px;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    text-align: center;
+    font-size: 14px;
+    background-color: #c6cace;
+    color: #111;
+}

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Leaderboard</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+
+<body>
+
+    <p class="title">Leaderboard</p>
+
+    <table class="leaderboard">
+        <tr>
+            <th>Player</th>
+            <th>Wins</th>
+            <th>Losses</th>
+            <th>Ties</th>
+            <th>Total</th>
+        </tr>
+
+        {% for row in rows %}
+        <tr>
+            <td>{{ row[0] }}</td>
+            <td>{{ row[1] }}</td>
+            <td>{{ row[2] }}</td>
+            <td>{{ row[3] }}</td>
+            <td>{{ row[4] }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+
+    <a href="/" class="back-btn">Back to Game</a>
+
+</body>
+</html>

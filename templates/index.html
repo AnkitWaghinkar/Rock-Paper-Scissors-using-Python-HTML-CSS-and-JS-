@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Rock Paper Scissors</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.7.13/lottie.min.js"></script>
+
+    <script>
+        window.soundEnabled = {{ sound | tojson }};
+    </script>
+
+    <script src="/static/js/script.js" defer></script>
+</head>
+
+<body>
+
+    <a href="/toggle_sound" class="sound-toggle">
+        {{ "Sound" if sound else "Mute" }}
+    </a>
+
+<p class="title fade-in">Rock Paper Scissors</p>
+
+<div class="scoreboard fade-in">
+    <div>Player: <span>{{ player_score }}</span></div>
+    <div>Computer: <span>{{ computer_score }}</span></div>
+    <a href="/leaderboard" class="lb-btn">Leaderboard</a>
+</div>
+
+<div id="loading" class="loading hidden">
+    <lottie-player 
+        src="https://assets9.lottiefiles.com/packages/lf20_usmfx6bp.json"
+        background="transparent"
+        speed="1"
+        loop autoplay>
+    </lottie-player>
+</div>
+
+<div id="gameArea" class="container fade-in">
+
+    <form method="POST" class="choices" onsubmit="showLoading()">
+        <div class="inputText">
+            <input type="text" name="player_name" placeholder="Please enter your name" class="name-input" required>
+        </div>
+        
+        <button type="submit" name="choice" value="rock" onclick="playClick()">
+            <img src="/static/images/rock.png" class="icon">
+        </button>
+
+        <button type="submit" name="choice" value="paper" onclick="playClick()">
+            <img src="/static/images/paper.png" class="icon">
+        </button>
+
+        <button type="submit" name="choice" value="scissors" onclick="playClick()">
+            <img src="/static/images/scissors.png" class="icon">
+        </button>
+    </form>
+
+    {% if result %}
+    <div class="result-box fade-in">
+        <h2>Computer chose:</h2>
+        <img src="/static/images/{{ computer }}.png" class="icon">
+
+        <h1 id="result">{{ result }}</h1>
+
+        <div id="lottieContainer"></div>
+
+        <script>
+            if ("{{ animation }}") {
+                lottie.loadAnimation({
+                    container: document.getElementById("lottieContainer"),
+                    renderer: "svg",
+                    loop: true,
+                    autoplay: true,
+                    path: "/static/lottie/{{ animation }}.json"
+                });
+            }
+        </script>
+    </div>
+    {% endif %}
+</div>
+
+<audio id="clickSound" src="/static/audio/click.mp3"></audio>
+<audio id="winSound" src="/static/audio/win.mp3"></audio>
+<audio id="loseSound" src="/static/audio/lose.mp3"></audio>
+<audio id="tieSound" src="/static/audio/tie.mp3"></audio>
+
+</body>
+</html>
